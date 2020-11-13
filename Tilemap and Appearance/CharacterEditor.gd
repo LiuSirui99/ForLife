@@ -53,10 +53,10 @@ func on_color_change(color):
 	$Container/Base.get_node(current_item).modulate = color
 	color_map[current_item] = color.to_html()
 
-
 func _on_SaveButton_pressed():
 	var file = File.new()
 	file.open(FILE_NAME,File.WRITE)
 	file.store_string(to_json(color_map))
 	file.close()
 	print(to_json(color_map))
+	get_tree().change_scene("res://RPGWorld.tscn")
