@@ -1,0 +1,193 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://sky.jpg" type="Texture" id=1]
+[ext_resource path="res://dynamic.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://BarlowCondensed-Black.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Register.tres.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 35
+outline_size = 1
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 20
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=5]
+font_data = ExtResource( 3 )
+
+[node name="Register" type="Control"]
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RegisterRect" type="NinePatchRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 312.0
+margin_top = 37.5
+margin_right = 712.0
+margin_bottom = 562.5
+rect_min_size = Vector2( 400, 525 )
+texture = ExtResource( 1 )
+patch_margin_top = 28
+patch_margin_bottom = 28
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="RegisterRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 32.0061
+margin_top = 64.2851
+margin_right = -20.9939
+margin_bottom = -39.7148
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="RegisterRect/VBoxContainer"]
+margin_right = 347.0
+margin_bottom = 73.0
+custom_fonts/font = SubResource( 1 )
+text = "Register Screen
+"
+align = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="RegisterRect/VBoxContainer"]
+margin_top = 77.0
+margin_right = 347.0
+margin_bottom = 87.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="UsernameTitle" type="Label" parent="RegisterRect/VBoxContainer"]
+margin_top = 91.0
+margin_right = 347.0
+margin_bottom = 115.0
+custom_fonts/font = SubResource( 2 )
+text = "Username"
+
+[node name="Username" type="LineEdit" parent="RegisterRect/VBoxContainer"]
+margin_top = 119.0
+margin_right = 347.0
+margin_bottom = 143.0
+caret_blink = true
+caret_blink_speed = 0.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PasswordTitle" type="Label" parent="RegisterRect/VBoxContainer"]
+margin_top = 147.0
+margin_right = 347.0
+margin_bottom = 171.0
+custom_fonts/font = SubResource( 3 )
+text = "Password"
+
+[node name="Password" type="LineEdit" parent="RegisterRect/VBoxContainer"]
+margin_top = 175.0
+margin_right = 347.0
+margin_bottom = 199.0
+caret_blink = true
+caret_blink_speed = 0.5
+
+[node name="MarginContainer2" type="MarginContainer" parent="RegisterRect/VBoxContainer"]
+margin_top = 203.0
+margin_right = 347.0
+margin_bottom = 243.0
+rect_min_size = Vector2( 0, 40 )
+
+[node name="Register" type="Button" parent="RegisterRect"]
+margin_left = 37.5142
+margin_top = 286.553
+margin_right = 367.514
+margin_bottom = 312.553
+custom_fonts/font = SubResource( 4 )
+text = "Register"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Register2Login" type="Button" parent="RegisterRect"]
+margin_left = 37.5571
+margin_top = 330.017
+margin_right = 367.557
+margin_bottom = 356.017
+custom_fonts/font = SubResource( 5 )
+text = "Login"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="pop_good" type="ConfirmationDialog" parent="RegisterRect"]
+visible = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -70.0
+margin_right = 200.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 400, 140 )
+popup_exclusive = true
+window_title = "Register Successfully"
+dialog_text = "      You have successfully register you account at Forlife. 
+
+                           Enjoy your journey now :) "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="pop_bad" type="ConfirmationDialog" parent="RegisterRect"]
+visible = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -70.0
+margin_right = 200.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 400, 140 )
+window_title = "Register Failed"
+dialog_text = "                                Registeration failed!
+
+                 Please check if you have filled username 
+                  and password with minimum length 1 "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="pop_no_file" type="ConfirmationDialog" parent="RegisterRect"]
+visible = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -70.0
+margin_right = 200.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 400, 140 )
+window_title = "No database file error"
+dialog_text = "                                      Event failed!  
+
+                          we don't find any user data file!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="RegisterRect/Register" to="." method="_on_Register_pressed"]
+[connection signal="pressed" from="RegisterRect/Register2Login" to="." method="_on_Register2Login_pressed"]
