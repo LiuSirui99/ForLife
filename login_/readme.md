@@ -1,4 +1,22 @@
 **login interface** [ enable user to login, register, log out etc.]
-- Database for storing the user infos
-- Enable to choose user profile from the system [ maybe used for the character appearance later]
+TODO
+
+- [x] Login scene
+
+- [x] Register scene
+
+- [x] Login function ( script implementation)
+
+- [x] Register function ( script implementation)
+
+- [x] Password security mode
+
+- [x] Database management
+
+- [x] Popup window (ConfirmationDialogue)
+
+- [ ] Logout function (script implementation)
+
+- [ ] Main scene
+
 
