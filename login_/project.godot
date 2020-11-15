@@ -16,7 +16,12 @@ _global_script_class_icons={
 [application]
 
 config/name="Login interface"
+run/main_scene="res://Login1.tscn"
 config/icon="res://icon.png"
+
+[editor_plugins]
+
+enabled=PoolStringArray(  )
 
 [rendering]
 
