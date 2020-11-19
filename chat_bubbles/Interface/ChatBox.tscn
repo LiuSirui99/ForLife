@@ -1,0 +1,35 @@
+[gd_scene format=2]
+
+[node name="ChatBox" type="PanelContainer"]
+anchor_left = 0.495
+anchor_top = 1.0
+anchor_right = 0.495
+anchor_bottom = 1.0
+margin_left = -239.88
+margin_top = -38.0
+margin_right = 239.12
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="."]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 472.0
+margin_bottom = 31.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 2
+
+[node name="text" type="LineEdit" parent="GridContainer"]
+margin_right = 418.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+
+[node name="send" type="Button" parent="GridContainer"]
+margin_left = 422.0
+margin_right = 465.0
+margin_bottom = 24.0
+size_flags_horizontal = 8
+text = "Send"
+align = 2
