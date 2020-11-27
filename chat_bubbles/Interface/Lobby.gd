@@ -1,17 +1,19 @@
 extends Node2D
 
 onready var logInPanel = get_node("LogInPanel")
-var player = preload("res://Player/Player.tscn").instance()
+onready var textInput = get_node("ChatBox/Container/Text")
+onready var sendBtn = get_node("ChatBox/Container/Send")
+var player = preload("res://Player/Character.tscn").instance()
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	logInPanel.popup()
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-
 
 func _on_LogInPanel_popup_hide():
 	player.userName = logInPanel.givenName
 	add_child(player)
+
+func _on_ChatBox_textSent():
+	if textInput.text != "":
+		player.get_node("Speech").text = textInput.text
+		player.get_node("Speech").visible = true
+		player.get_node("Speech/Timer").start(4)

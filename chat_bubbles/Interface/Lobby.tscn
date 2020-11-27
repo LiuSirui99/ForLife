@@ -25,5 +25,7 @@ margin_top = 224.891
 margin_right = 699.0
 margin_bottom = 351.891
 popup_exclusive = true
+[connection signal="focus_entered" from="ChatBox" to="." method="_on_ChatBox_focus_entered"]
+[connection signal="textSent" from="ChatBox" to="." method="_on_ChatBox_textSent"]
 [connection signal="draw" from="LogInPanel" to="." method="_on_LogInPanel_draw"]
 [connection signal="popup_hide" from="LogInPanel" to="." method="_on_LogInPanel_popup_hide"]

@@ -1,4 +1,6 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Interface/ChatBox.gd" type="Script" id=1]
 
 [node name="ChatBox" type="PanelContainer"]
 anchor_left = 0.495
@@ -8,11 +10,12 @@ anchor_bottom = 1.0
 margin_left = -239.88
 margin_top = -38.0
 margin_right = 239.12
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="GridContainer" type="GridContainer" parent="."]
+[node name="Container" type="GridContainer" parent="."]
 margin_left = 7.0
 margin_top = 7.0
 margin_right = 472.0
@@ -21,15 +24,17 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 columns = 2
 
-[node name="text" type="LineEdit" parent="GridContainer"]
+[node name="Text" type="LineEdit" parent="Container"]
 margin_right = 418.0
 margin_bottom = 24.0
 size_flags_horizontal = 3
 
-[node name="send" type="Button" parent="GridContainer"]
+[node name="Send" type="Button" parent="Container"]
 margin_left = 422.0
 margin_right = 465.0
 margin_bottom = 24.0
 size_flags_horizontal = 8
 text = "Send"
 align = 2
+[connection signal="textSent" from="." to="." method="_on_ChatBox_textSent"]
+[connection signal="pressed" from="Container/Send" to="." method="_on_Send_pressed"]
