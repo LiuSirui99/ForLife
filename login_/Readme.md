@@ -18,6 +18,5 @@ Task list:
 
 - [ ] Logout function (script implementation)
 
-- [ ] Main scene
 
 
