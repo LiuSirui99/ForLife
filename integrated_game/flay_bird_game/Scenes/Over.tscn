@@ -1,0 +1,87 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://flay_bird_game/Scripts/Over.gd" type="Script" id=1]
+[ext_resource path="res://flay_bird_game/Assets/Images/medal3.png" type="Texture" id=2]
+[ext_resource path="res://flay_bird_game/Assets/Images/medal1.png" type="Texture" id=3]
+[ext_resource path="res://flay_bird_game/Assets/Images/medal2.png" type="Texture" id=4]
+[ext_resource path="res://flay_bird_game/Assets/Images/menu.png" type="Texture" id=5]
+[ext_resource path="res://flay_bird_game/Assets/Images/over.png" type="Texture" id=6]
+[ext_resource path="res://flay_bird_game/Assets/Images/reward.png" type="Texture" id=7]
+[ext_resource path="res://flay_bird_game/Assets/Fonts/ZpixEX2_EX-10pix.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://flay_bird_game/Assets/Images/ok.png" type="Texture" id=9]
+[ext_resource path="res://flay_bird_game/Assets/Images/ok2.png" type="Texture" id=10]
+
+[sub_resource type="DynamicFont" id=1]
+size = 20
+font_data = ExtResource( 8 )
+
+[sub_resource type="CameraTexture" id=2]
+
+[sub_resource type="Theme" id=3]
+Button/icons/OK = SubResource( 2 )
+
+[node name="Over" type="Node2D"]
+script = ExtResource( 1 )
+images = [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ]
+
+[node name="Bg" type="Sprite" parent="."]
+position = Vector2( 170.633, 314.091 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 5 )
+
+[node name="Logo" type="Sprite" parent="Bg"]
+position = Vector2( 3.18889, -162.633 )
+texture = ExtResource( 6 )
+
+[node name="Reward" type="Sprite" parent="Bg"]
+position = Vector2( 5.56091, -22.226 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 7 )
+
+[node name="Last" type="Label" parent="Bg/Reward"]
+margin_left = 46.5066
+margin_top = -28.6077
+margin_right = 86.5066
+margin_bottom = 0.392258
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "0"
+align = 1
+valign = 1
+
+[node name="Best" type="Label" parent="Bg/Reward"]
+margin_left = 46.5066
+margin_top = 13.1865
+margin_right = 86.5066
+margin_bottom = 42.1865
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "0"
+align = 1
+valign = 1
+
+[node name="Coin" type="Sprite" parent="Bg/Reward"]
+position = Vector2( -65.2687, 9.29871 )
+texture = ExtResource( 3 )
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="Bg"]
+position = Vector2( -52.6444, 100.239 )
+scale = Vector2( 1.5, 1.5 )
+normal = ExtResource( 9 )
+pressed = ExtResource( 10 )
+
+[node name="TextureButton" type="TextureButton" parent="Bg"]
+margin_left = -32.0
+margin_top = 170.0
+margin_right = 48.0
+margin_bottom = 200.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource( 3 )
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Bg/TouchScreenButton" to="." method="_on_TouchScreenButton_pressed"]
+[connection signal="pressed" from="Bg/TextureButton" to="." method="_on_TextureButton_pressed"]

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/sfx_score.wav-e087cf1b67b41ed608834bf7458d0bbe.sample"
+
+[deps]
+
+source_file="res://flay_bird_game/Assets/Audios/sfx_score.wav"
+dest_files=[ "res://.import/sfx_score.wav-e087cf1b67b41ed608834bf7458d0bbe.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

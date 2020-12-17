@@ -18,3 +18,7 @@ func _ready():
 
 func _on_Area2D_body_entered(body):
 	get_tree().change_scene("res://RPGWorld.tscn")
+
+
+func _on_Button_pressed():
+	get_tree().change_scene("res://flay_bird_game/Scenes/Main.tscn") 

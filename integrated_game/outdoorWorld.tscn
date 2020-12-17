@@ -663,4 +663,15 @@ shape = SubResource( 11 )
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 19.3747, 558.774 )
 scale = Vector2( 0.172522, 0.263419 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 496.0
+margin_top = 492.0
+margin_right = 573.0
+margin_bottom = 512.0
+text = "play game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

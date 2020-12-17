@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Bg.ogg-055fe138645396831387737c8c6db43f.oggstr"
+
+[deps]
+
+source_file="res://flay_bird_game/Assets/Audios/Bg.ogg"
+dest_files=[ "res://.import/Bg.ogg-055fe138645396831387737c8c6db43f.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -19,6 +19,10 @@ config/name="ForLife"
 run/main_scene="res://CharacterEditor.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Global="*res://flay_bird_game/Scripts/Global.gd"
+
 [display]
 
 window/size/width=960
