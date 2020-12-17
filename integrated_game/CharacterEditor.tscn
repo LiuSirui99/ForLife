@@ -49,10 +49,17 @@ __meta__ = {
 }
 
 [node name="ColorPicker" type="ColorPicker" parent="Container/Panel"]
+<<<<<<< HEAD
 margin_left = 20.3865
 margin_top = -18.9994
 margin_right = 625.387
 margin_bottom = 568.001
+=======
+margin_left = 32.3865
+margin_top = -6.9994
+margin_right = 637.387
+margin_bottom = 580.001
+>>>>>>> 8071540b139b8b4218515b7b2fb115c60a3856d8
 rect_scale = Vector2( 0.640001, 0.769504 )
 color = Color( 0.498039, 0.109804, 0.109804, 1 )
 edit_alpha = false
